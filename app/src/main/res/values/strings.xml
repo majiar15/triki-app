@@ -3,4 +3,22 @@
     <string name="start">Start</string>
     <string name="triki">Triki</string>
     <string name="tablero">tablero</string>
+    <string name="img0">img0</string>
+    <string name="img1">img1</string>
+    <string name="img2">img2</string>
+    <string name="img3">img3</string>
+    <string name="img4">img4</string>
+    <string name="img5">img5</string>
+    <string name="img6">img6</string>
+    <string name="img7">img7</string>
+    <string name="img8">img8</string>
+    <string name="casilla0">casilla0</string>
+    <string name="casilla1">casilla1</string>
+    <string name="casilla2">casilla2</string>
+    <string name="casilla3">casilla3</string>
+    <string name="casilla4">casilla4</string>
+    <string name="casilla5">casilla5</string>
+    <string name="casilla6">casilla6</string>
+    <string name="casilla7">casilla7</string>
+    <string name="casilla8">casilla8</string>
 </resources>
