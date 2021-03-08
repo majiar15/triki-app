@@ -53,7 +53,7 @@ public class tablero extends AppCompatActivity {
 
     public void handleBtn0 (View view){
         ImageView img = findViewById(R.id.casilla0);
-        
+
         process(img, 0);
         turn++;
     }
