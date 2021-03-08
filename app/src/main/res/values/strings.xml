@@ -21,4 +21,10 @@
     <string name="casilla6">casilla6</string>
     <string name="casilla7">casilla7</string>
     <string name="casilla8">casilla8</string>
+    <string name="scorep1">0</string>
+    <string name="scorep2">0</string>
+    <string name="menu">menu</string>
+    <string name="recetear">Recetear</string>
+    <string name="todo2">TODO</string>
+    <string name="todo">TODO</string>
 </resources>
