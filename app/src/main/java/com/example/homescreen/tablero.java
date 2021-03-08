@@ -49,6 +49,24 @@ public class tablero extends AppCompatActivity {
         dialog.show();
 
     }
+    private void openEmpateDialog() {
+        dialog.setContentView(R.layout.empate_layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView imageViewClose= dialog.findViewById(R.id.imageViewClose);
+        Button btnSalir= dialog.findViewById(R.id.btnSalir);
+
+        imageViewClose.setOnClickListener(v -> {
+            dialog.dismiss();
+            Toast.makeText(tablero.this, "Dialog close",Toast.LENGTH_SHORT).show();
+        });
+        btnSalir.setOnClickListener((View v) -> {
+            dialog.dismiss();
+            Toast.makeText(tablero.this, "Button salir",Toast.LENGTH_SHORT).show();
+        });
+        dialog.show();
+
+    }
     
 
     public void handleBtn0 (View view){
@@ -122,7 +140,7 @@ public class tablero extends AppCompatActivity {
             openWinDialog(player);
             player1Win++;
             resetTablero();
-
+            
             for (int i = 0; i < taberArray.length; i++){
                 taberArray[i] = "";
             }
@@ -274,10 +292,11 @@ public class tablero extends AppCompatActivity {
                 taberArray[i] = "";
             }
         }else{
-            if(turn > 8){
-
+            if(turn > 7){
+                openEmpateDialog();
                 for (int i = 0; i < taberArray.length; i++){
                     taberArray[i] = "";
+
                 }
                 resetTablero();
             }
