@@ -17,6 +17,7 @@ public class tablero extends AppCompatActivity {
     public int turn = 0;
     public int player1Win = 0;
     public int player2Win = 0;
+    public String namePlayer1, namePlayer2;
     TextView counterCruz, counterCircle;
     private final String[] taberArray = new String[9];
 
@@ -28,6 +29,16 @@ public class tablero extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablero);
         dialog = new Dialog(this);
+
+        Bundle extras = this.getIntent().getExtras();
+        if(extras !=null){
+            namePlayer1 = extras.getString("player1");
+            namePlayer2 = extras.getString("player2");
+            TextView tv1 = findViewById(R.id.tvName1);
+            tv1.setText(namePlayer1);
+            TextView tv2 = findViewById(R.id.tvName2);
+            tv2.setText(namePlayer2);
+        }
     }
 
     private void openWinDialog(String player) {
@@ -123,12 +134,12 @@ public class tablero extends AppCompatActivity {
                 img.setImageResource(R.drawable.x);
                 img.setTag("cross");
                 taberArray[position] = "cross";
-                winner("Cruz");
+                winner(namePlayer1);
             }else{
                 img.setImageResource(R.drawable.circle);
                 img.setTag("circle");
                 taberArray[position] = "circle";
-                winner("Circulo");
+                winner(namePlayer2);
             }
 
         }
